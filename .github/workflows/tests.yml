@@ -18,7 +18,7 @@ jobs:
           - "ubuntu-20.04"
           - "windows-latest"
         dependencies:
-          - "lowest"
+          - "stable"
           - "highest"
 
     steps:
