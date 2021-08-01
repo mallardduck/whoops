@@ -54,8 +54,12 @@ jobs:
         with:
           timeout_minutes: 5
           max_attempts: 5
-          command: composer require "phpunit/phpunit:^9.3.3" --dev --no-update --no-interaction
+          command: composer require "phpunit/phpunit:^9.5.8" --dev --no-update --no-interaction
         if: "matrix.php >= 7.4"
+
+      - name: "Set PHP platform for 8.1 alpha"
+        if: ${{ matrix.php-version == '8.1' }}
+        run: composer config platform.php 8.0
 
       - name: "Install dependencies (Composer)"
         uses: "ramsey/composer-install@v1"
