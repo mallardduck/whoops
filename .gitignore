@@ -1,4 +1,5 @@
 composer.lock
+.idea
 phpunit.xml
 report
 vendor
