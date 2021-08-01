@@ -34,10 +34,6 @@ jobs:
         env:
           update: true
 
-      - name: "Set PHP platform for 8.1 alpha"
-        if: ${{ matrix.php == '8.1' }}
-        run: composer config platform.php 8.0
-
       - name: Setup Problem Matchers
         run: echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
